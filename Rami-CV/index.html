@@ -1,0 +1,1430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rami Ahmed Elgeushy Mohamed | CV</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --olive: #243b32;
+            --sage: #82988b;
+            --sage-light: #dce5df;
+            --ivory: #f3f1eb;
+            --cream: #faf9f5;
+            --white: #ffffff;
+            --charcoal: #29302d;
+            --muted: #69736e;
+            --line: #dfe3df;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--ivory);
+            color: var(--charcoal);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            width: 100%;
+            background: var(--white);
+            border-bottom: 1px solid var(--line);
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            color: var(--olive);
+            font-size: 18px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: var(--muted);
+            font-size: 13px;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--olive);
+        }
+
+        /* HERO */
+
+       .hero {
+    background: var(--olive);
+    color: var(--white);
+    padding: 70px 7% 65px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    border: 1px solid rgba(220, 229, 223, 0.12);
+    border-radius: 50%;
+    right: -120px;
+    top: -120px;
+}
+
+.hero-content {
+    max-width: 1100px;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-label {
+    color: var(--sage-light);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 5.5vw, 64px);
+    line-height: 1.04;
+    letter-spacing: -1.8px;
+    font-weight: 800;
+    margin-bottom: 22px;
+}
+
+.hero-line {
+    width: 55px;
+    height: 3px;
+    background: var(--sage);
+    border-radius: 10px;
+    margin-bottom: 18px;
+}
+
+.hero-location {
+    color: var(--sage-light);
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.hero-contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.hero-contact a {
+    transition: 0.3s ease;
+}
+
+.hero-contact a:hover {
+    color: var(--sage-light);
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 19px;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.btn-primary {
+    background: var(--white);
+    color: var(--olive);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    border: 1px solid rgba(220, 229, 223, 0.6);
+    color: var(--white);
+}
+
+.btn-outline:hover {
+    background: var(--sage-light);
+    color: var(--olive);
+}
+
+        .hero-content {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .hero-label {
+            color: var(--sage-light);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            font-size: clamp(38px, 6vw, 72px);
+            line-height: 1.05;
+            letter-spacing: -2px;
+            font-weight: 800;
+            margin-bottom: 25px;
+        }
+
+        .hero-line {
+            width: 70px;
+            height: 4px;
+            background: var(--sage);
+            border-radius: 10px;
+            margin-bottom: 22px;
+        }
+
+        .hero-location {
+            color: var(--sage-light);
+            font-size: 15px;
+            margin-bottom: 18px;
+        }
+
+        .hero-contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 14px;
+            margin-bottom: 28px;
+        }
+
+        .hero-contact a:hover {
+            color: var(--sage-light);
+        }
+
+        .buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 11px 20px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 700;
+            transition: 0.3s ease;
+        }
+
+        .btn-primary {
+            background: var(--white);
+            color: var(--olive);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 1px solid var(--sage-light);
+            color: var(--white);
+        }
+
+        .btn-outline:hover {
+            background: var(--sage-light);
+            color: var(--olive);
+        }
+
+        /* MAIN */
+
+        main {
+            width: min(1100px, 90%);
+            margin: 70px auto;
+        }
+
+        /* SECTIONS */
+
+        .section {
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .section-title::before {
+            content: "";
+            width: 5px;
+            height: 30px;
+            background: var(--sage);
+            border-radius: 10px;
+        }
+
+        .section-title h2 {
+            color: var(--olive);
+            font-size: 27px;
+            letter-spacing: -0.5px;
+        }
+
+        /* OBJECTIVE */
+
+        .objective-card {
+            background: var(--white);
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 30px;
+            box-shadow: 0 8px 25px rgba(36, 59, 50, 0.05);
+        }
+
+        .objective-card p {
+            font-size: 15px;
+            line-height: 1.9;
+            color: var(--charcoal);
+        }
+
+        /* EXPERIENCE */
+
+       .experience {
+    position: relative;
+    padding-left: 32px;
+}
+
+.experience::before {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background: var(--sage-light);
+}
+
+.job {
+    position: relative;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 30px 32px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 20px rgba(36, 59, 50, 0.04);
+    transition: all 0.3s ease;
+}
+
+.job:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(36, 59, 50, 0.08);
+    border-color: var(--sage);
+}
+
+.job::before {
+    content: "";
+    position: absolute;
+    left: -32px;
+    top: 32px;
+    width: 12px;
+    height: 12px;
+    background: var(--olive);
+    border: 4px solid var(--sage-light);
+    border-radius: 50%;
+}
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.job h3 {
+    color: var(--olive);
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.company {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.date {
+    background: var(--sage-light);
+    color: var(--olive);
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.job ul {
+    padding-left: 20px;
+}
+
+.job li {
+    color: var(--charcoal);
+    font-size: 13px;
+    line-height: 1.9;
+    margin-bottom: 9px;
+}
+        /* EDUCATION */
+
+       .education-card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 32px;
+    box-shadow: 0 5px 20px rgba(36, 59, 50, 0.04);
+    transition: all 0.3s ease;
+}
+
+.education-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(36, 59, 50, 0.08);
+    border-color: var(--sage);
+}
+
+.education-card h3 {
+    color: var(--olive);
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.education-card p {
+    color: var(--charcoal);
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 7px;
+}
+
+.grade {
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--sage-light);
+    color: var(--olive);
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+        /* TWO COLUMNS */
+
+        .two-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .info-card {
+            background: var(--white);
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 27px;
+            box-shadow: 0 8px 25px rgba(36, 59, 50, 0.05);
+        }
+
+        /* SKILLS */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 11px;
+        }
+
+        .skill {
+            background: var(--cream);
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            padding: 12px 13px;
+            font-size: 13px;
+            color: var(--charcoal);
+            transition: 0.25s ease;
+        }
+
+        .skill:hover {
+            background: var(--sage-light);
+            transform: translateY(-2px);
+        }
+
+        /* LANGUAGES */
+
+        .language {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 16px;
+    margin-bottom: 8px;
+    background: var(--cream);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.language:last-child {
+    margin-bottom: 0;
+}
+
+.language:hover {
+    border-color: var(--sage);
+    background: var(--sage-light);
+}
+
+.language strong {
+    color: var(--charcoal);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.language span {
+    color: var(--olive);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+        /* CERTIFICATES */
+
+       .certificate {
+    padding: 16px 18px;
+    margin-bottom: 10px;
+    background: var(--cream);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.certificate:first-child {
+    padding-top: 16px;
+}
+
+.certificate:last-child {
+    margin-bottom: 0;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--line);
+}
+
+.certificate:hover {
+    border-color: var(--sage);
+    background: var(--sage-light);
+    transform: translateX(3px);
+}
+
+.certificate strong {
+    display: block;
+    color: var(--olive);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.6;
+    margin-bottom: 6px;
+}
+
+.certificate span {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+        /* PERSONAL DETAILS */
+
+       .details {
+    display: grid;
+    gap: 10px;
+}
+
+.detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 14px 16px;
+    background: var(--cream);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.detail:hover {
+    border-color: var(--sage);
+    background: var(--sage-light);
+}
+
+.detail:last-child {
+    border-bottom: 1px solid var(--line);
+}
+
+.detail-label {
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.detail-value {
+    color: var(--charcoal);
+    font-size: 13px;
+    font-weight: 700;
+    text-align: right;
+}
+
+        /* CONTACT */
+
+        .contact-card {
+    background: var(--olive);
+    color: var(--white);
+    border-radius: 14px;
+    padding: 42px 30px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(36, 59, 50, 0.08);
+}
+
+.contact-card h2 {
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.contact-card p {
+    color: var(--sage-light);
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.contact-link {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 12px 18px;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+    background: var(--white);
+    color: var(--olive);
+    transform: translateY(-3px);
+}
+
+        /* FOOTER */
+
+        footer {
+            background: var(--olive);
+            color: var(--white);
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        footer p {
+            color: var(--sage-light);
+            font-size: 12px;
+        }
+
+        /* ANIMATION */
+
+        .fade-up {
+            animation: fadeUp 0.8s ease both;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            nav {
+                padding: 16px 5%;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 65px 6% 55px;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .two-columns {
+                grid-template-columns: 1fr;
+            }
+
+            .job-header {
+                flex-direction: column;
+            }
+
+            .date {
+                align-self: flex-start;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            main {
+                width: 92%;
+                margin-top: 50px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+                letter-spacing: -1px;
+            }
+
+            .hero-contact {
+                flex-direction: column;
+                gap: 7px;
+            }
+
+            .objective-card,
+            .education-card,
+            .info-card,
+            .job {
+                padding: 22px;
+            }
+
+            .experience {
+                padding-left: 24px;
+            }
+
+            .job::before {
+                left: -25px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title h2 {
+                font-size: 23px;
+            }
+
+            .detail {
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .detail-value {
+                text-align: left;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <div class="logo">
+            RAMI ELGEUSHY
+        </div>
+
+        <div class="nav-links">
+
+            <a href="#objective">
+                Objective
+            </a>
+
+            <a href="#experience">
+                Experience
+            </a>
+
+            <a href="#education">
+                Education
+            </a>
+
+            <a href="#skills">
+                Skills
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- HERO -->
+
+    <header class="hero fade-up">
+
+        <div class="hero-content">
+
+            <div class="hero-label">
+               CURRICULUM VITAE
+            </div>
+
+            <h1>
+                RAMI AHMED<br>
+                ELGEUSHY MOHAMED
+            </h1>
+
+            <div class="hero-line"></div>
+
+            <div class="hero-location">
+                Maadi, Egypt
+            </div>
+
+            <div class="hero-contact">
+
+                <a href="tel:+201100364369">
+                    +201100364369
+                </a>
+
+                <a href="mailto:ramyvv.ahmed712@gmail.com">
+                    ramyvv.ahmed712@gmail.com
+                </a>
+
+            </div>
+
+            <div class="buttons">
+
+                <a
+                    href="http://linkedin.com/in/ramii-elgeushy-5b309b278"
+                    target="_blank"
+                    class="btn btn-primary"
+                >
+                    LinkedIn
+                </a>
+
+                <a
+                    href="mailto:ramyvv.ahmed712@gmail.com"
+                    class="btn btn-outline"
+                >
+                    Contact
+                </a>
+
+            </div>
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- MAIN -->
+
+    <main>
+
+
+        <!-- OBJECTIVE -->
+
+        <section class="section" id="objective">
+
+            <div class="section-title">
+
+                <h2>
+                    Objective
+                </h2>
+
+            </div>
+
+            <div class="objective-card">
+
+                <p>
+                    Looking forward to a challenging position in the banking
+                    sector or accounting field, in which I can apply my
+                    experience and knowledge, where experience and education
+                    will be effectively utilized with opportunity for
+                    advancement.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROFESSIONAL EXPERIENCE -->
+
+        <section class="section" id="experience">
+
+            <div class="section-title">
+
+                <h2>
+                    Professional Experience
+                </h2>
+
+            </div>
+
+            <div class="experience">
+
+
+                <!-- MICO ACCOUNT MANAGER -->
+
+                <article class="job">
+
+                    <div class="job-header">
+
+                        <div>
+
+                            <h3>
+                                Account Manager
+                            </h3>
+
+                            <div class="company">
+                                Mico World Mena
+                            </div>
+
+                        </div>
+
+                        <div class="date">
+                            Aug. 2024 – Present
+                        </div>
+
+                    </div>
+
+                    <ul>
+
+                        <li>
+                            Build and maintain strong, long-lasting relationships with clients.
+                        </li>
+
+                        <li>
+                            Address client complaints or issues promptly and effectively.
+                        </li>
+
+                        <li>
+                            Collaborate with internal teams (e.g., product development,
+                            and customer support) to resolve challenges.
+                        </li>
+
+                        <li>
+                            Monitor the performance of client accounts and suggest
+                            improvements or optimization.
+                        </li>
+
+                        <li>
+                            Prepare and deliver performance reports, forecasts,
+                            and account reviews.
+                        </li>
+
+                        <li>
+                            Ensure compliance with the terms and conditions agreed upon.
+                        </li>
+
+                    </ul>
+
+                </article>
+
+
+                <!-- MICO MONITORING -->
+
+                <article class="job">
+
+                    <div class="job-header">
+
+                        <div>
+
+                            <h3>
+                                Monitoring Specialist
+                            </h3>
+
+                            <div class="company">
+                                Mico World Mena
+                            </div>
+
+                        </div>
+
+                        <div class="date">
+                            May 2024 – Aug. 2024
+                        </div>
+
+                    </div>
+
+                    <ul>
+
+                        <li>
+                            Responsible for ensuring the safety and compliance
+                            of our platform content.
+                        </li>
+
+                        <li>
+                            Reviewing and handling illegal content across various
+                            mediums such as pictures, live broadcasts, short videos,
+                            voice recordings, and text.
+                        </li>
+
+                        <li>
+                            Proactively identify clues and patterns related to illegal
+                            content and report them to the appropriate authorities.
+                        </li>
+
+                        <li>
+                            Maintaining a safe and compliant platform for our users.
+                        </li>
+
+                        <li>
+                            Analyze content, and dedication to upholding content safety
+                            standards will contribute to the success of our organization.
+                        </li>
+
+                    </ul>
+
+                </article>
+
+
+                <!-- MARKETING STAR -->
+
+                <article class="job">
+                    <!-- MARKETING STAR -->
+
+<article class="job">
+
+    <div class="job-header">
+
+        <div>
+
+            <h3>
+                Sales
+            </h3>
+
+            <div class="company">
+                Marketing Star
+            </div>
+
+        </div>
+
+        <div class="date">
+            May 2022 – Dec. 2023
+        </div>
+
+    </div>
+
+    <ul>
+
+        <li>
+            Team Management: Leading and motivating the sales team
+            to achieve their goals.
+        </li>
+
+        <li>
+            Client Relations: Building and maintaining relationships
+            with key clients.
+        </li>
+
+        <li>
+            Market Analysis: Understanding market demands,
+            competitors, and customer needs.
+        </li>
+
+        <li>
+            Reporting: Monitoring sales performance and preparing
+            reports for higher management.
+        </li>
+
+    </ul>
+
+</article>
+
+
+<!-- VODAFONE -->
+
+<article class="job">
+
+    <div class="job-header">
+
+        <div>
+
+            <h3>
+                Sales
+            </h3>
+
+            <div class="company">
+                Vodafone
+            </div>
+
+        </div>
+
+        <div class="date">
+            May 2021 – Jun. 2021
+        </div>
+
+    </div>
+
+    <ul>
+
+        <li>
+            Sales outdoor and dealing with customers.
+        </li>
+
+        <li>
+            Close sales through face-to-face interaction
+            with customers.
+        </li>
+
+        <li>
+            Helping customers find SIM-card that meet their
+            needs and requirements.
+        </li>
+
+    </ul>
+
+</article>
+
+</div>
+
+</section>
+
+
+<!-- EDUCATION -->
+
+<section class="section" id="education">
+
+    <div class="section-title">
+
+        <h2>
+            Education
+        </h2>
+
+    </div>
+
+    <div class="education-card">
+
+        <h3>
+            Faculty of Commerce and Business Administration –
+            English Section
+        </h3>
+
+        <p>
+            Cairo University
+        </p>
+
+        <p>
+            Bachelor Degree of Accounting
+        </p>
+
+        <span class="grade">
+            Overall Grade: Very Good
+        </span>
+
+    </div>
+
+</section>
+
+
+<!-- SKILLS AND LANGUAGES -->
+
+<section class="section">
+
+    <div class="two-columns">
+
+
+        <!-- SKILLS -->
+
+        <div id="skills">
+
+            <div class="section-title">
+
+                <h2>
+                    Skills
+                </h2>
+
+            </div>
+
+            <div class="info-card">
+
+                <div class="skills-grid">
+
+                    <div class="skill">
+                        MS Office
+                    </div>
+
+                    <div class="skill">
+                        Oracle HR program
+                    </div>
+
+                    <div class="skill">
+                        Communication skills
+                    </div>
+
+                    <div class="skill">
+                        Interpersonal skills
+                    </div>
+
+                    <div class="skill">
+                        Time Management
+                    </div>
+
+                    <div class="skill">
+                        Problem solving
+                    </div>
+
+                    <div class="skill">
+                        Strong written and oral communication
+                    </div>
+
+                    <div class="skill">
+                        Teamwork
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- LANGUAGES -->
+
+        <div>
+
+            <div class="section-title">
+
+                <h2>
+                    Languages
+                </h2>
+
+            </div>
+
+            <div class="info-card">
+
+                <div class="language">
+
+                    <strong>
+                        Arabic
+                    </strong>
+
+                    <span>
+                        Mother Language
+                    </span>
+
+                </div>
+
+                <div class="language">
+
+                    <strong>
+                        English
+                    </strong>
+
+                    <span>
+                        Good
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CERTIFICATES -->
+
+<section class="section">
+
+    <div class="section-title">
+
+        <h2>
+            Certificates
+        </h2>
+
+    </div>
+
+    <div class="info-card">
+
+        <div class="certificate">
+
+            <strong>
+                Summer training at Commercial International Bank
+            </strong>
+
+            <span>
+                Jul 2021 – Aug 2021
+            </span>
+
+        </div>
+
+        <div class="certificate">
+
+            <strong>
+                Internship completion – Banque Misr
+            </strong>
+
+            <span>
+                Jun 2021 – Jul 2021
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PERSONAL DETAILS -->
+
+<section class="section">
+
+    <div class="section-title">
+
+        <h2>
+            Personal Details
+        </h2>
+
+    </div>
+
+    <div class="info-card">
+
+        <div class="details">
+
+            <div class="detail">
+
+                <span class="detail-label">
+                    Date of Birth
+                </span>
+
+                <span class="detail-value">
+                    15/10/2000
+                </span>
+
+            </div>
+
+            <div class="detail">
+
+                <span class="detail-label">
+                    Military Status
+                </span>
+
+                <span class="detail-value">
+                    Exempted
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="section" id="contact">
+
+    <div class="contact-card">
+
+        <h2>
+            Contact
+        </h2>
+
+        <p>
+            Rami Ahmed Elgeushy Mohamed
+        </p>
+
+        <div class="contact-links">
+
+            <a
+                href="tel:+201100364369"
+                class="contact-link"
+            >
+                +201100364369
+            </a>
+
+            <a
+                href="mailto:ramyvv.ahmed712@gmail.com"
+                class="contact-link"
+            >
+                ramyvv.ahmed712@gmail.com
+            </a>
+
+            <a
+                href="http://linkedin.com/in/ramii-elgeushy-5b309b278"
+                target="_blank"
+                class="contact-link"
+            >
+                LinkedIn
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        Rami Ahmed Elgeushy Mohamed — Curriculum Vitae
+    </p>
+
+</footer>
+
+</body>
+
+</html>
