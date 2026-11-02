@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -44,7 +43,6 @@
             color: inherit;
         }
 
-
         /* NAVIGATION */
 
         nav {
@@ -82,13 +80,114 @@
         .nav-links a:hover {
             color: var(--olive);
         }
+
         /* HERO */
 
-        .hero {
-            background: var(--olive);
-            color: var(--white);
-            padding: 85px 7% 75px;
-        }
+       .hero {
+    background: var(--olive);
+    color: var(--white);
+    padding: 70px 7% 65px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    border: 1px solid rgba(220, 229, 223, 0.12);
+    border-radius: 50%;
+    right: -120px;
+    top: -120px;
+}
+
+.hero-content {
+    max-width: 1100px;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-label {
+    color: var(--sage-light);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 5.5vw, 64px);
+    line-height: 1.04;
+    letter-spacing: -1.8px;
+    font-weight: 800;
+    margin-bottom: 22px;
+}
+
+.hero-line {
+    width: 55px;
+    height: 3px;
+    background: var(--sage);
+    border-radius: 10px;
+    margin-bottom: 18px;
+}
+
+.hero-location {
+    color: var(--sage-light);
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.hero-contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.hero-contact a {
+    transition: 0.3s ease;
+}
+
+.hero-contact a:hover {
+    color: var(--sage-light);
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 19px;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.btn-primary {
+    background: var(--white);
+    color: var(--olive);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    border: 1px solid rgba(220, 229, 223, 0.6);
+    color: var(--white);
+}
+
+.btn-outline:hover {
+    background: var(--sage-light);
+    color: var(--olive);
+}
 
         .hero-content {
             max-width: 1100px;
@@ -96,65 +195,57 @@
         }
 
         .hero-label {
-            display: inline-block;
             color: var(--sage-light);
             font-size: 12px;
             font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
+            letter-spacing: 3px;
             margin-bottom: 18px;
         }
 
         .hero h1 {
-            max-width: 850px;
             font-size: clamp(38px, 6vw, 72px);
             line-height: 1.05;
             letter-spacing: -2px;
+            font-weight: 800;
             margin-bottom: 25px;
         }
 
-        .hero-subtitle {
-            max-width: 700px;
-            color: var(--sage-light);
-            font-size: 17px;
-            line-height: 1.8;
-            margin-bottom: 30px;
+        .hero-line {
+            width: 70px;
+            height: 4px;
+            background: var(--sage);
+            border-radius: 10px;
+            margin-bottom: 22px;
         }
 
-        .hero-info {
+        .hero-location {
+            color: var(--sage-light);
+            font-size: 15px;
+            margin-bottom: 18px;
+        }
+
+        .hero-contact {
             display: flex;
             flex-wrap: wrap;
-            gap: 12px 25px;
-            margin-bottom: 32px;
-        }
-
-        .hero-info span {
-            color: var(--white);
+            gap: 20px;
             font-size: 14px;
+            margin-bottom: 28px;
         }
 
-        .hero-info a {
-            color: var(--white);
-            transition: 0.3s ease;
-        }
-
-        .hero-info a:hover {
+        .hero-contact a:hover {
             color: var(--sage-light);
         }
 
-        .hero-buttons {
+        .buttons {
             display: flex;
-            flex-wrap: wrap;
             gap: 12px;
+            flex-wrap: wrap;
         }
 
-        .btn-primary,
-        .btn-outline {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 13px 22px;
-            border-radius: 5px;
+        .btn {
+            display: inline-block;
+            padding: 11px 20px;
+            border-radius: 8px;
             font-size: 13px;
             font-weight: 700;
             transition: 0.3s ease;
@@ -167,55 +258,50 @@
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
 
         .btn-outline {
-            border: 1px solid rgba(255, 255, 255, 0.45);
+            border: 1px solid var(--sage-light);
             color: var(--white);
         }
 
         .btn-outline:hover {
-            background: rgba(255, 255, 255, 0.1);
+            background: var(--sage-light);
+            color: var(--olive);
         }
 
         /* MAIN */
 
         main {
-            max-width: 1200px;
-            margin: auto;
-            padding: 75px 7%;
+            width: min(1100px, 90%);
+            margin: 70px auto;
         }
+
+        /* SECTIONS */
 
         .section {
-            margin-bottom: 85px;
-            scroll-margin-top: 90px;
+            margin-bottom: 60px;
         }
 
-        .section-heading {
+        .section-title {
             display: flex;
             align-items: center;
-            gap: 18px;
-            margin-bottom: 35px;
+            gap: 12px;
+            margin-bottom: 25px;
         }
 
-        .section-number {
-            color: var(--sage);
-            font-size: 13px;
-            font-weight: 800;
-            letter-spacing: 1px;
+        .section-title::before {
+            content: "";
+            width: 5px;
+            height: 30px;
+            background: var(--sage);
+            border-radius: 10px;
         }
 
-        .section-heading h2 {
+        .section-title h2 {
             color: var(--olive);
-            font-size: 30px;
-            line-height: 1.2;
-        }
-
-        .section-line {
-            flex: 1;
-            height: 1px;
-            background: var(--line);
+            font-size: 27px;
+            letter-spacing: -0.5px;
         }
 
         /* OBJECTIVE */
@@ -223,286 +309,364 @@
         .objective-card {
             background: var(--white);
             border: 1px solid var(--line);
-            border-left: 5px solid var(--sage);
+            border-radius: 18px;
             padding: 30px;
-            border-radius: 8px;
             box-shadow: 0 8px 25px rgba(36, 59, 50, 0.05);
         }
 
         .objective-card p {
-            color: var(--muted);
-            font-size: 16px;
+            font-size: 15px;
             line-height: 1.9;
+            color: var(--charcoal);
         }
+
         /* EXPERIENCE */
 
-        .experience-list {
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-        }
+       .experience {
+    position: relative;
+    padding-left: 32px;
+}
 
-        .job {
-            background: var(--white);
-            border: 1px solid var(--line);
-            border-radius: 8px;
-            padding: 30px;
-            transition: 0.3s ease;
-        }
+.experience::before {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background: var(--sage-light);
+}
 
-        .job:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 30px rgba(36, 59, 50, 0.08);
-            border-color: var(--sage);
-        }
+.job {
+    position: relative;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 30px 32px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 20px rgba(36, 59, 50, 0.04);
+    transition: all 0.3s ease;
+}
 
-        .job-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 20px;
-            margin-bottom: 20px;
-        }
+.job:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(36, 59, 50, 0.08);
+    border-color: var(--sage);
+}
 
-        .job-title {
-            color: var(--olive);
-            font-size: 21px;
-            font-weight: 800;
-            margin-bottom: 5px;
-        }
+.job::before {
+    content: "";
+    position: absolute;
+    left: -32px;
+    top: 32px;
+    width: 12px;
+    height: 12px;
+    background: var(--olive);
+    border: 4px solid var(--sage-light);
+    border-radius: 50%;
+}
 
-        .job-company {
-            color: var(--sage);
-            font-size: 14px;
-            font-weight: 700;
-        }
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 20px;
+}
 
-        .job-date {
-            color: var(--muted);
-            font-size: 13px;
-            white-space: nowrap;
-        }
+.job h3 {
+    color: var(--olive);
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
 
-        .job ul {
-            padding-left: 20px;
-            color: var(--muted);
-        }
+.company {
+    color: var(--muted);
+    font-size: 13px;
+}
 
-        .job li {
-            margin-bottom: 9px;
-            padding-left: 5px;
-        }
+.date {
+    background: var(--sage-light);
+    color: var(--olive);
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+}
 
+.job ul {
+    padding-left: 20px;
+}
+
+.job li {
+    color: var(--charcoal);
+    font-size: 13px;
+    line-height: 1.9;
+    margin-bottom: 9px;
+}
         /* EDUCATION */
 
-        .education-card {
+       .education-card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 32px;
+    box-shadow: 0 5px 20px rgba(36, 59, 50, 0.04);
+    transition: all 0.3s ease;
+}
+
+.education-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(36, 59, 50, 0.08);
+    border-color: var(--sage);
+}
+
+.education-card h3 {
+    color: var(--olive);
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.education-card p {
+    color: var(--charcoal);
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 7px;
+}
+
+.grade {
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--sage-light);
+    color: var(--olive);
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+        /* TWO COLUMNS */
+
+        .two-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .info-card {
             background: var(--white);
             border: 1px solid var(--line);
-            border-radius: 8px;
-            padding: 30px;
-            transition: 0.3s ease;
-        }
-
-        .education-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 30px rgba(36, 59, 50, 0.08);
-        }
-
-        .education-card h3 {
-            color: var(--olive);
-            font-size: 20px;
-            margin-bottom: 8px;
-        }
-
-        .education-card .university {
-            color: var(--sage);
-            font-weight: 700;
-            margin-bottom: 12px;
-        }
-
-        .education-card p {
-            color: var(--muted);
-            font-size: 14px;
+            border-radius: 18px;
+            padding: 27px;
+            box-shadow: 0 8px 25px rgba(36, 59, 50, 0.05);
         }
 
         /* SKILLS */
 
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 12px;
+            grid-template-columns: 1fr 1fr;
+            gap: 11px;
         }
 
         .skill {
-            background: var(--white);
+            background: var(--cream);
             border: 1px solid var(--line);
-            border-radius: 6px;
-            padding: 16px;
+            border-radius: 10px;
+            padding: 12px 13px;
+            font-size: 13px;
             color: var(--charcoal);
-            font-size: 14px;
-            font-weight: 600;
-            text-align: center;
-            transition: 0.3s ease;
+            transition: 0.25s ease;
         }
 
         .skill:hover {
             background: var(--sage-light);
-            border-color: var(--sage);
             transform: translateY(-2px);
         }
 
         /* LANGUAGES */
 
-        .languages-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
-
         .language {
-            background: var(--white);
-            border: 1px solid var(--line);
-            border-radius: 8px;
-            padding: 25px;
-            transition: 0.3s ease;
-        }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 16px;
+    margin-bottom: 8px;
+    background: var(--cream);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
 
-        .language:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(36, 59, 50, 0.07);
-        }
+.language:last-child {
+    margin-bottom: 0;
+}
 
-        .language strong {
-            display: block;
-            color: var(--olive);
-            font-size: 17px;
-            margin-bottom: 5px;
-        }
+.language:hover {
+    border-color: var(--sage);
+    background: var(--sage-light);
+}
 
-        .language span {
-            color: var(--muted);
-            font-size: 14px;
-        }
+.language strong {
+    color: var(--charcoal);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.language span {
+    color: var(--olive);
+    font-size: 12px;
+    font-weight: 700;
+}
+
         /* CERTIFICATES */
 
-        .certificates-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
+       .certificate {
+    padding: 16px 18px;
+    margin-bottom: 10px;
+    background: var(--cream);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
 
-        .certificate {
-            background: var(--white);
-            border: 1px solid var(--line);
-            border-radius: 8px;
-            padding: 25px;
-            transition: 0.3s ease;
-        }
+.certificate:first-child {
+    padding-top: 16px;
+}
 
-        .certificate:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(36, 59, 50, 0.07);
-        }
+.certificate:last-child {
+    margin-bottom: 0;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--line);
+}
 
-        .certificate-title {
-            color: var(--olive);
-            font-size: 16px;
-            font-weight: 700;
-            margin-bottom: 7px;
-        }
+.certificate:hover {
+    border-color: var(--sage);
+    background: var(--sage-light);
+    transform: translateX(3px);
+}
 
-        .certificate-date {
-            color: var(--muted);
-            font-size: 13px;
-        }
+.certificate strong {
+    display: block;
+    color: var(--olive);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.6;
+    margin-bottom: 6px;
+}
+
+.certificate span {
+    color: var(--muted);
+    font-size: 12px;
+}
 
         /* PERSONAL DETAILS */
 
-        .details-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
+       .details {
+    display: grid;
+    gap: 10px;
+}
 
-        .detail {
-            background: var(--white);
-            border: 1px solid var(--line);
-            border-radius: 8px;
-            padding: 25px;
-            transition: 0.3s ease;
-        }
+.detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 14px 16px;
+    background: var(--cream);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
 
-        .detail:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(36, 59, 50, 0.07);
-        }
+.detail:hover {
+    border-color: var(--sage);
+    background: var(--sage-light);
+}
 
-        .detail-label {
-            color: var(--sage);
-            font-size: 12px;
-            font-weight: 800;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            margin-bottom: 6px;
-        }
+.detail:last-child {
+    border-bottom: 1px solid var(--line);
+}
 
-        .detail-value {
-            color: var(--olive);
-            font-size: 16px;
-            font-weight: 700;
-        }
+.detail-label {
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.detail-value {
+    color: var(--charcoal);
+    font-size: 13px;
+    font-weight: 700;
+    text-align: right;
+}
 
         /* CONTACT */
 
         .contact-card {
-            background: var(--olive);
-            color: var(--white);
-            border-radius: 10px;
-            padding: 40px;
-        }
+    background: var(--olive);
+    color: var(--white);
+    border-radius: 14px;
+    padding: 42px 30px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(36, 59, 50, 0.08);
+}
 
-        .contact-card h3 {
-            font-size: 28px;
-            margin-bottom: 10px;
-        }
+.contact-card h2 {
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
 
-        .contact-card > p {
-            color: var(--sage-light);
-            margin-bottom: 25px;
-        }
+.contact-card p {
+    color: var(--sage-light);
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
 
-        .contact-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
+.contact-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
 
-        .contact-link {
-            display: inline-flex;
-            align-items: center;
-            padding: 12px 17px;
-            border: 1px solid rgba(255, 255, 255, 0.25);
-            border-radius: 5px;
-            color: var(--white);
-            font-size: 13px;
-            transition: 0.3s ease;
-        }
+.contact-link {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 12px 18px;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
 
-        .contact-link:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: rgba(255, 255, 255, 0.5);
-        }
+.contact-link:hover {
+    background: var(--white);
+    color: var(--olive);
+    transform: translateY(-3px);
+}
 
         /* FOOTER */
 
         footer {
-            background: var(--white);
-            border-top: 1px solid var(--line);
-            padding: 25px 7%;
+            background: var(--olive);
+            color: var(--white);
             text-align: center;
-            color: var(--muted);
+            padding: 30px 20px;
+        }
+
+        footer p {
+            color: var(--sage-light);
             font-size: 12px;
         }
+
         /* ANIMATION */
 
         .fade-up {
@@ -521,248 +685,12 @@
             }
         }
 
-        /* PRINT / PDF */
-       
-           @media print {
-
-    @page {
-        size: A4;
-        margin: 0;
-        
-
-    }
-
-    html,
-    body {
-        width: 210mm;
-        margin: 0 !important;
-        padding: 0 !important;
-        background: var(--ivory) !important;
-        -webkit-print-color-adjust: exact !important;
-        print-color-adjust: exact !important;
-    }
-
-    * {
-        -webkit-print-color-adjust: exact !important;
-        print-color-adjust: exact !important;
-    }
-
-    body {
-        font-size: 13px;
-        line-height: 1.4;
-    }
-
-    nav {
-        position: static !important;
-        padding: 10px 5% !important;
-    }
-
-    .logo {
-        font-size: 14px !important;
-    }
-
-    .nav-links {
-        gap: 12px !important;
-    }
-
-    .nav-links a {
-        font-size: 10px !important;
-    }
-
-    .hero {
-        padding: 25px 6% 22px !important;
-    }
-
-    .hero h1 {
-        font-size: 38px !important;
-        margin-bottom: 12px !important;
-    }
-
-    .hero-subtitle {
-        font-size: 13px !important;
-        margin-bottom: 15px !important;
-    }
-
-    .hero-info {
-        gap: 7px 15px !important;
-        margin-bottom: 15px !important;
-    }
-
-    .hero-info span {
-        font-size: 10px !important;
-    }
-
-    .btn-primary,
-    .btn-outline {
-        padding: 7px 12px !important;
-        font-size: 10px !important;
-    }
-
-    main {
-        padding: 35px 6% !important;
-    }
-
-    .section {
-        margin-bottom: 35px !important;
-        scroll-margin-top: 0 !important;
-    }
-
-    .section-heading {
-        margin-bottom: 15px !important;
-        gap: 10px !important;
-    }
-
-    .section-heading h2 {
-        font-size: 21px !important;
-    }
-
-    .section-number {
-        font-size: 10px !important;
-    }
-
-    .objective-card,
-    .job,
-    .education-card,
-    .language,
-    .certificate,
-    .detail,
-    .contact-card {
-        padding: 13px !important;
-    }
-
-    .objective-card p {
-        font-size: 12px !important;
-        line-height: 1.55 !important;
-    }
-
-    .experience-list {
-        gap: 6px !important;
-    }
-
-    .job-header {
-        margin-bottom: 6px !important;
-    }
-
-    .job-title {
-        font-size: 15px !important;
-    }
-
-    .job-company,
-    .job-date {
-        font-size: 10px !important;
-    }
-
-    .job ul {
-        padding-left: 15px !important;
-    }
-
-    .job li {
-        margin-bottom: 2px !important;
-        font-size: 10px !important;
-        line-height: 1.3 !important;
-    }
-
-    .education-card h3 {
-        font-size: 14px !important;
-    }
-
-    .education-card p {
-        font-size: 10px !important;
-    }
-
-    .skills-grid {
-        gap: 7px !important;
-    }
-
-    .skill {
-        padding: 9px !important;
-        font-size: 10px !important;
-    }
-
-    .languages-grid,
-    .certificates-grid,
-    .details-grid {
-        gap: 10px !important;
-    }
-
-    .language strong {
-        font-size: 13px !important;
-    }
-
-    .language span,
-    .certificate-date {
-        font-size: 10px !important;
-    }
-
-    .certificate-title {
-        font-size: 11px !important;
-    }
-
-    .detail-label {
-        font-size: 9px !important;
-    }
-
-    .detail-value {
-        font-size: 12px !important;
-    }
-
-    .contact-card {
-        padding: 20px !important;
-    }
-
-    .contact-card h3 {
-        font-size: 20px !important;
-    }
-
-    .contact-card > p {
-        font-size: 10px !important;
-        margin-bottom: 12px !important;
-    }
-
-    .contact-link {
-        padding: 7px 10px !important;
-        font-size: 9px !important;
-    }
-
-    footer {
-        padding: 12px 5% !important;
-        font-size: 9px !important;
-    }
-
-    .fade-up {
-        animation: none !important;
-        opacity: 1 !important;
-        transform: none !important;
-    }
-
-    .job,
-    .objective-card,
-    .education-card,
-    .language,
-    .certificate,
-    .detail,
-    .contact-card {
-        break-inside: avoid !important;
-        page-break-inside: avoid !important;
-    }
-
-    a {
-        text-decoration: none !important;
-    }
-
-    a[href]::after {
-        content: none !important;
-    }
-
-}
-        }
-
         /* MOBILE */
 
         @media (max-width: 800px) {
 
             nav {
-                padding: 15px 5%;
+                padding: 16px 5%;
             }
 
             .nav-links {
@@ -770,96 +698,89 @@
             }
 
             .hero {
-                padding: 60px 5% 55px;
+                padding: 65px 6% 55px;
             }
 
             .hero h1 {
-                font-size: 40px;
+                font-size: 42px;
             }
 
-            main {
-                padding: 55px 5%;
-            }
-
-            .section {
-                margin-bottom: 65px;
-            }
-
-            .skills-grid {
-                grid-template-columns: repeat(2, 1fr);
+            .two-columns {
+                grid-template-columns: 1fr;
             }
 
             .job-header {
                 flex-direction: column;
-                gap: 5px;
             }
 
-            .job-date {
-                white-space: normal;
+            .date {
+                align-self: flex-start;
             }
         }
 
-        @media (max-width: 550px) {
+        @media (max-width: 500px) {
+
+            main {
+                width: 92%;
+                margin-top: 50px;
+            }
 
             .hero h1 {
-                font-size: 34px;
+                font-size: 32px;
+                letter-spacing: -1px;
             }
 
-            .hero-info {
+            .hero-contact {
                 flex-direction: column;
-                gap: 8px;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-            }
-
-            .btn-primary,
-            .btn-outline {
-                width: 100%;
-            }
-
-            .section-heading h2 {
-                font-size: 25px;
-            }
-
-            .skills-grid,
-            .languages-grid,
-            .certificates-grid,
-            .details-grid {
-                grid-template-columns: 1fr;
+                gap: 7px;
             }
 
             .objective-card,
-            .job,
             .education-card,
-            .language,
-            .certificate,
-            .detail,
-            .contact-card {
+            .info-card,
+            .job {
                 padding: 22px;
             }
-            .contact-links {
-                flex-direction: column;
+
+            .experience {
+                padding-left: 24px;
             }
 
-            .contact-link {
-                width: 100%;
+            .job::before {
+                left: -25px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title h2 {
+                font-size: 23px;
+            }
+
+            .detail {
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .detail-value {
+                text-align: left;
             }
         }
 
     </style>
 
 </head>
+
 <body>
 
     <!-- NAVIGATION -->
 
     <nav>
 
-        <a href="#" class="logo">
+        <div class="logo">
             RAMI ELGEUSHY
-        </a>
+        </div>
 
         <div class="nav-links">
 
@@ -890,60 +811,55 @@
 
     <!-- HERO -->
 
-    <header class="hero">
+    <header class="hero fade-up">
 
-        <div class="hero-content fade-up">
+        <div class="hero-content">
 
-            <span class="hero-label">
-                Professional CV
-            </span>
+            <div class="hero-label">
+               CURRICULUM VITAE
+            </div>
 
             <h1>
                 RAMI AHMED<br>
                 ELGEUSHY MOHAMED
             </h1>
 
-            <p class="hero-subtitle">
-                Banking & Accounting Professional
-            </p>
+            <div class="hero-line"></div>
 
-            <div class="hero-info">
+            <div class="hero-location">
+                Maadi, Egypt
+            </div>
 
-                <span>
-                    📍 Maadi, Egypt
-                </span>
+            <div class="hero-contact">
 
-                <span>
-                    📞
-                    <a href="tel:+201100364369">
-                        +201100364369
-                    </a>
-                </span>
+                <a href="tel:+201100364369">
+                    +201100364369
+                </a>
 
-                <span>
-                    ✉
-                    <a href="mailto:ramyy.ahmed712@gmail.com">
-                        ramyy.ahmed712@gmail.com
-                    </a>
-                </span>
+                <a href="mailto:ramyy.ahmed712@gmail.com">
+                    ramyy.ahmed712@gmail.com
+                </a>
 
             </div>
 
-            <div class="hero-buttons">
+            <div class="buttons">
 
                 <a
                     href="http://linkedin.com/in/ramii-elgeushy-5b309b278"
                     target="_blank"
-                    class="btn-primary"
+                    class="btn btn-primary"
                 >
-                    LinkedIn Profile
+                    LinkedIn
                 </a>
 
                 <a
-                    href="#contact"
-                    class="btn-outline"
+                    href="mailto:ramyy.ahmed712@gmail.com"
+                    class="btn btn-outline"
                 >
-                    Contact Me
+                    Contact
+                </a>
+
+            </div>
                 </a>
 
             </div>
@@ -953,36 +869,31 @@
     </header>
 
 
-    <!-- MAIN CONTENT -->
+    <!-- MAIN -->
 
     <main>
 
 
         <!-- OBJECTIVE -->
 
-        <section
-            class="section fade-up"
-            id="objective"
-        >
+        <section class="section" id="objective">
 
-            <div class="section-heading">
-
-                <span class="section-number">
-                    01
-                </span>
+            <div class="section-title">
 
                 <h2>
                     Objective
                 </h2>
-
-                <div class="section-line"></div>
 
             </div>
 
             <div class="objective-card">
 
                 <p>
-                    Looking forward to a challenging position in the banking sector or accounting field, in which I can apply my experience and knowledge, where experience and education will be effectively utilized with opportunity for advancement.
+                    Looking forward to a challenging position in the banking
+                    sector or accounting field, in which I can apply my
+                    experience and knowledge, where experience and education
+                    will be effectively utilized with opportunity for
+                    advancement.
                 </p>
 
             </div>
@@ -990,31 +901,22 @@
         </section>
 
 
-        <!-- EXPERIENCE -->
+        <!-- PROFESSIONAL EXPERIENCE -->
 
-        <section
-            class="section fade-up"
-            id="experience"
-        >
+        <section class="section" id="experience">
 
-            <div class="section-heading">
-
-                <span class="section-number">
-                    02
-                </span>
+            <div class="section-title">
 
                 <h2>
                     Professional Experience
                 </h2>
 
-                <div class="section-line"></div>
-
             </div>
 
-            <div class="experience-list">
+            <div class="experience">
 
 
-                <!-- ACCOUNT MANAGER -->
+                <!-- MICO ACCOUNT MANAGER -->
 
                 <article class="job">
 
@@ -1022,19 +924,19 @@
 
                         <div>
 
-                            <h3 class="job-title">
+                            <h3>
                                 Account Manager
                             </h3>
 
-                            <p class="job-company">
+                            <div class="company">
                                 Mico World Mena
-                            </p>
+                            </div>
 
                         </div>
 
-                        <span class="job-date">
+                        <div class="date">
                             Aug. 2024 – Present
-                        </span>
+                        </div>
 
                     </div>
 
@@ -1043,20 +945,24 @@
                         <li>
                             Build and maintain strong, long-lasting relationships with clients.
                         </li>
+
                         <li>
                             Address client complaints or issues promptly and effectively.
                         </li>
 
                         <li>
-                            Collaborate with internal teams (e.g., product development, and customer support) to resolve challenges.
+                            Collaborate with internal teams (e.g., product development,
+                            and customer support) to resolve challenges.
                         </li>
 
                         <li>
-                            Monitor the performance of client accounts and suggest improvements or optimization.
+                            Monitor the performance of client accounts and suggest
+                            improvements or optimization.
                         </li>
 
                         <li>
-                            Prepare and deliver performance reports, forecasts, and account reviews.
+                            Prepare and deliver performance reports, forecasts,
+                            and account reviews.
                         </li>
 
                         <li>
@@ -1068,7 +974,7 @@
                 </article>
 
 
-                <!-- MONITORING SPECIALIST -->
+                <!-- MICO MONITORING -->
 
                 <article class="job">
 
@@ -1076,34 +982,38 @@
 
                         <div>
 
-                            <h3 class="job-title">
+                            <h3>
                                 Monitoring Specialist
                             </h3>
 
-                            <p class="job-company">
+                            <div class="company">
                                 Mico World Mena
-                            </p>
+                            </div>
 
                         </div>
 
-                        <span class="job-date">
+                        <div class="date">
                             May 2024 – Aug. 2024
-                        </span>
+                        </div>
 
                     </div>
 
                     <ul>
 
                         <li>
-                            Responsible for ensuring the safety and compliance of our platform content.
+                            Responsible for ensuring the safety and compliance
+                            of our platform content.
                         </li>
 
                         <li>
-                            Reviewing and handling illegal content across various mediums such as pictures, live broadcasts, short videos, voice recordings, and text.
+                            Reviewing and handling illegal content across various
+                            mediums such as pictures, live broadcasts, short videos,
+                            voice recordings, and text.
                         </li>
 
                         <li>
-                            Proactively identify clues and patterns related to illegal content and report them to the appropriate authorities.
+                            Proactively identify clues and patterns related to illegal
+                            content and report them to the appropriate authorities.
                         </li>
 
                         <li>
@@ -1111,223 +1021,229 @@
                         </li>
 
                         <li>
-                            Analyze content, and dedication to upholding content safety standards will contribute to the success of our organization.
+                            Analyze content, and dedication to upholding content safety
+                            standards will contribute to the success of our organization.
                         </li>
 
                     </ul>
 
                 </article>
+
+
                 <!-- MARKETING STAR -->
 
                 <article class="job">
+                    <!-- MARKETING STAR -->
 
-                    <div class="job-header">
+<article class="job">
 
-                        <div>
+    <div class="job-header">
 
-                            <h3 class="job-title">
-                                Sales
-                            </h3>
+        <div>
 
-                            <p class="job-company">
-                                Marketing Star
-                            </p>
+            <h3>
+                Sales
+            </h3>
 
-                        </div>
-
-                        <span class="job-date">
-                            May 2022 – Dec. 2023
-                        </span>
-
-                    </div>
-
-                    <ul>
-
-                        <li>
-                            Team Management: Leading and motivating the sales team to achieve their goals.
-                        </li>
-
-                        <li>
-                            Client Relations: Building and maintaining relationships with key clients.
-                        </li>
-
-                        <li>
-                            Market Analysis: Understanding market demands, competitors, and customer needs.
-                        </li>
-
-                        <li>
-                            Reporting: Monitoring sales performance and preparing reports for higher management.
-                        </li>
-
-                    </ul>
-
-                </article>
-
-
-                <!-- VODAFONE -->
-
-                <article class="job">
-
-                    <div class="job-header">
-
-                        <div>
-
-                            <h3 class="job-title">
-                                Sales
-                            </h3>
-
-                            <p class="job-company">
-                                Vodafone
-                            </p>
-
-                        </div>
-
-                        <span class="job-date">
-                            May 2021 – Jun. 2021
-                        </span>
-
-                    </div>
-
-                    <ul>
-
-                        <li>
-                            Sales outdoor and dealing with customers.
-                        </li>
-
-                        <li>
-                            Close sales through face-to-face interaction with customers.
-                        </li>
-
-                        <li>
-                            Helping customers find SIM-card that meet their needs and requirements.
-                        </li>
-
-                    </ul>
-
-                </article>
-
-
+            <div class="company">
+                Marketing Star
             </div>
 
-        </section>
+        </div>
+
+        <div class="date">
+            May 2022 – Dec. 2023
+        </div>
+
+    </div>
+
+    <ul>
+
+        <li>
+            Team Management: Leading and motivating the sales team
+            to achieve their goals.
+        </li>
+
+        <li>
+            Client Relations: Building and maintaining relationships
+            with key clients.
+        </li>
+
+        <li>
+            Market Analysis: Understanding market demands,
+            competitors, and customer needs.
+        </li>
+
+        <li>
+            Reporting: Monitoring sales performance and preparing
+            reports for higher management.
+        </li>
+
+    </ul>
+
+</article>
 
 
-        <!-- EDUCATION -->
+<!-- VODAFONE -->
 
-        <section
-            class="section fade-up"
-            id="education"
-        >
+<article class="job">
 
-            <div class="section-heading">
+    <div class="job-header">
 
-                <span class="section-number">
-                    03
-                </span>
+        <div>
 
-                <h2>
-                    Education
-                </h2>
+            <h3>
+                Sales
+            </h3>
 
-                <div class="section-line"></div>
-
+            <div class="company">
+                Vodafone
             </div>
 
-            <div class="education-card">
+        </div>
 
-                <h3>
-                    Faculty of Commerce and Business Administration – English Section
-                </h3>
+        <div class="date">
+            May 2021 – Jun. 2021
+        </div>
 
-                <p class="university">
-                    Cairo University
-                </p>
+    </div>
 
-                <p>
-                    Bachelor Degree of Accounting – Overall Grade: Very Good
-                </p>
+    <ul>
 
-            </div>
+        <li>
+            Sales outdoor and dealing with customers.
+        </li>
 
-        </section>
+        <li>
+            Close sales through face-to-face interaction
+            with customers.
+        </li>
+
+        <li>
+            Helping customers find SIM-card that meet their
+            needs and requirements.
+        </li>
+
+    </ul>
+
+</article>
+
+</div>
+
+</section>
+
+
+<!-- EDUCATION -->
+
+<section class="section" id="education">
+
+    <div class="section-title">
+
+        <h2>
+            Education
+        </h2>
+
+    </div>
+
+    <div class="education-card">
+
+        <h3>
+            Faculty of Commerce and Business Administration –
+            English Section
+        </h3>
+
+        <p>
+            Cairo University
+        </p>
+
+        <p>
+            Bachelor Degree of Accounting
+        </p>
+
+        <span class="grade">
+            Overall Grade: Very Good
+        </span>
+
+    </div>
+
+</section>
+
+
+<!-- SKILLS AND LANGUAGES -->
+
+<section class="section">
+
+    <div class="two-columns">
 
 
         <!-- SKILLS -->
 
-        <section
-            class="section fade-up"
-            id="skills"
-        >
+        <div id="skills">
 
-            <div class="section-heading">
-
-                <span class="section-number">
-                    04
-                </span>
+            <div class="section-title">
 
                 <h2>
                     Skills
                 </h2>
 
-                <div class="section-line"></div>
+            </div>
+
+            <div class="info-card">
+
+                <div class="skills-grid">
+
+                    <div class="skill">
+                        MS Office
+                    </div>
+
+                    <div class="skill">
+                        Oracle HR program
+                    </div>
+
+                    <div class="skill">
+                        Communication skills
+                    </div>
+
+                    <div class="skill">
+                        Interpersonal skills
+                    </div>
+
+                    <div class="skill">
+                        Time Management
+                    </div>
+
+                    <div class="skill">
+                        Problem solving
+                    </div>
+
+                    <div class="skill">
+                        Strong written and oral communication
+                    </div>
+
+                    <div class="skill">
+                        Teamwork
+                    </div>
+
+                </div>
 
             </div>
 
-            <div class="skills-grid">
+        </div>
 
-                <div class="skill">
-                    MS Office
-                </div>
 
-                <div class="skill">
-                    Oracle HR program
-                </div>
-
-                <div class="skill">
-                    Communication skills
-                </div>
-                <div class="skill">
-                    Interpersonal skills
-                </div>
-
-                <div class="skill">
-                    Time Management
-                </div>
-
-                <div class="skill">
-                    Problem solving
-                </div>
-
-                <div class="skill">
-                    Strong written and oral communication
-                </div>
-
-                <div class="skill">
-                    Teamwork
-                </div>
-
-            </div>
-
-        </section>
         <!-- LANGUAGES -->
 
-        <section class="section fade-up">
+        <div>
 
-            <div class="section-heading">
-
-                <span class="section-number">
-                    05
-                </span>
+            <div class="section-title">
 
                 <h2>
                     Languages
                 </h2>
 
-                <div class="section-line"></div>
-
             </div>
 
-            <div class="languages-grid">
+            <div class="info-card">
 
                 <div class="language">
 
@@ -1355,168 +1271,159 @@
 
             </div>
 
-        </section>
+        </div>
+
+    </div>
+
+</section>
 
 
-        <!-- CERTIFICATES -->
+<!-- CERTIFICATES -->
 
-        <section class="section fade-up">
+<section class="section">
 
-            <div class="section-heading">
+    <div class="section-title">
 
-                <span class="section-number">
-                    06
+        <h2>
+            Certificates
+        </h2>
+
+    </div>
+
+    <div class="info-card">
+
+        <div class="certificate">
+
+            <strong>
+                Summer training at Commercial International Bank
+            </strong>
+
+            <span>
+                Jul 2021 – Aug 2021
+            </span>
+
+        </div>
+
+        <div class="certificate">
+
+            <strong>
+                Internship completion – Banque Misr
+            </strong>
+
+            <span>
+                Jun 2021 – Jul 2021
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PERSONAL DETAILS -->
+
+<section class="section">
+
+    <div class="section-title">
+
+        <h2>
+            Personal Details
+        </h2>
+
+    </div>
+
+    <div class="info-card">
+
+        <div class="details">
+
+            <div class="detail">
+
+                <span class="detail-label">
+                    Date of Birth
                 </span>
 
-                <h2>
-                    Certificates
-                </h2>
-
-                <div class="section-line"></div>
-
-            </div>
-
-            <div class="certificates-grid">
-
-                <div class="certificate">
-
-                    <div class="certificate-title">
-                        Summer training at Commercial International Bank
-                    </div>
-
-                    <div class="certificate-date">
-                        Jul 2021 – Aug 2021
-                    </div>
-
-                </div>
-
-                <div class="certificate">
-
-                    <div class="certificate-title">
-                        Internship completion – Banque Misr
-                    </div>
-
-                    <div class="certificate-date">
-                        Jun 2021 – Jul 2021
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- PERSONAL DETAILS -->
-
-        <section class="section fade-up">
-
-            <div class="section-heading">
-
-                <span class="section-number">
-                    07
+                <span class="detail-value">
+                    15/10/2000
                 </span>
 
-                <h2>
-                    Personal Details
-                </h2>
+            </div>
 
-                <div class="section-line"></div>
+            <div class="detail">
+
+                <span class="detail-label">
+                    Military Status
+                </span>
+
+                <span class="detail-value">
+                    Exempted
+                </span>
 
             </div>
 
-            <div class="details-grid">
+        </div>
 
-                <div class="detail">
+    </div>
 
-                    <div class="detail-label">
-                        Date of Birth
-                    </div>
-
-                    <div class="detail-value">
-                        15/10/2000
-                    </div>
-
-                </div>
-
-                <div class="detail">
-
-                    <div class="detail-label">
-                        Military Status
-                    </div>
-
-                    <div class="detail-value">
-                        Exempted
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
+</section>
 
 
-        <!-- CONTACT -->
+<!-- CONTACT -->
 
-        <section
-            class="section fade-up"
-            id="contact"
-        >
+<section class="section" id="contact">
 
-            <div class="contact-card">
+    <div class="contact-card">
 
-                <h3>
-                 Connect
-                </h3>
+        <h2>
+            Contact
+        </h2>
 
+        <p>
+            Rami Ahmed Elgeushy Mohamed
+        </p>
 
-                <div class="contact-links">
+        <div class="contact-links">
 
-                    <a
-                        class="contact-link"
-                        href="tel:+201100364369"
-                    >
-                        +201100364369
-                    </a>
+            <a
+                href="tel:+201100364369"
+                class="contact-link"
+            >
+                +201100364369
+            </a>
 
-                    <a
-                        class="contact-link"
-                        href="mailto:ramyy.ahmed712@gmail.com"
-                    >
-                        ramyy.ahmed712@gmail.com
-                    </a>
-                    <a
-                        class="contact-link"
-                        href="http://linkedin.com/in/ramii-elgeushy-5b309b278"
-                        target="_blank"
-                    >
-                        LinkedIn
-                    </a>
-                     <a
-                     class="contact-link"
-                     href="Rami_Elgeushy_CV.pdf"
-                    download
->
-                    Download CV
-                  </a>
-                </div>
+            <a
+                href="mailto:ramyy.ahmed712@gmail.com"
+                class="contact-link"
+            >
+                ramyy.ahmed712@gmail.com
+            </a>
 
-            </div>
+            <a
+                href="http://linkedin.com/in/ramii-elgeushy-5b309b278"
+                target="_blank"
+                class="contact-link"
+            >
+                LinkedIn
+            </a>
 
-        </section>
+        </div>
+
+    </div>
+
+</section>
+
+</main>
 
 
-    </main>
+<!-- FOOTER -->
 
+<footer>
 
-    <!-- FOOTER -->
+    <p>
+        Rami Ahmed Elgeushy Mohamed — Curriculum Vitae
+    </p>
 
-    <footer>
-
-        RAMI AHMED ELGEUSHY MOHAMED · Professional CV
-
-    </footer>
-
+</footer>
 
 </body>
 
